@@ -24,21 +24,21 @@ namespace WpfApplication1
 
 
         
-        private Brush snakeColor = Brushes.Green;
+        private Brush snakeColor = Brushes.Blue;
         private enum SIZE
         {
-            THIN = 4,
-            NORMAL = 6,
-            THICK = 8
+            THIN = 7,
+            NORMAL = 4,
+            THICK = 3
         };
         private enum MOVINGDIRECTION
         {
-            UPWARDS = 8,
+            UPWARDS = 6,
             DOWNWARDS = 2,
-            TOLEFT = 4,
-            TORIGHT = 6
+            TOLEFT = 8,
+            TORIGHT = 9
         };
-        private Point startingPoint = new Point(100, 100);
+        private Point startingPoint = new Point(50, 70);
         private Point currentPosition = new Point();
 
         // Movement direction initialisation
