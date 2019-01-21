@@ -76,7 +76,7 @@ namespace WpfApplication1
             paintSnake(startingPoint);
             currentPosition = startingPoint;
 
-            // Instantiate Food Objects
+            // Tworzenie Food Objects
             for (int n = 0; n < 1; n++)
             {
                 paintBonus(n);
@@ -105,7 +105,7 @@ namespace WpfApplication1
                 snakePoints.Add(currentposition);
 
 
-                // Restrict the tail of the snake
+                // Zwężanie ogona węża
                 if (count > length)
                 {
                     paintCanvas.Children.RemoveAt(count - length);
@@ -135,7 +135,7 @@ namespace WpfApplication1
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            // Expand the body of the snake to the direction of movement
+            // Poszerzanie ciała węża w kierunku ruchu
 
                 switch (direction)
                 {
@@ -162,7 +162,7 @@ namespace WpfApplication1
                     (currentPosition.Y < 5) || (currentPosition.Y > 380))
                     GameOver();
 
-                // Hitting a bonus Point causes the lengthen-Snake Effect
+                // Trafienie w punkt bonusowy powoduje wydłużanie węża
                 int n = 0;
                 foreach (Point point in bonusPoints)
                 {
@@ -186,7 +186,7 @@ namespace WpfApplication1
                     n++;
                 }
 
-                // Restrict hits to body of Snake
+                // Ograniczenie trafień ciała węża
 
 
                 for (int q = 0; q < (snakePoints.Count - headSize*2); q++)
