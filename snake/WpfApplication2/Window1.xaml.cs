@@ -41,7 +41,7 @@ namespace WpfApplication1
         private Point startingPoint = new Point(50, 70);
         private Point currentPosition = new Point();
 
-        // Movement direction initialisation
+        // Inicjalizacja kierunku ruchu 
         private int direction = 0;
 
         /* Placeholder for the previous movement direction
@@ -241,7 +241,7 @@ namespace WpfApplication1
 
         private void GameOver()
         {
-            MessageBox.Show("You Lose! Your score is "+ score.ToString(), "Game Over", MessageBoxButton.OK, MessageBoxImage.Hand);
+            MessageBox.Show("You Lose! Your score is "+ score.ToString(), "GAME OVER", MessageBoxButton.OK, MessageBoxImage.Hand);
             this.Activate();
         }
     }
